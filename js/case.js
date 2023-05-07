@@ -1,4 +1,4 @@
-// function-1 to increase or decrease phone or case number
+// function-1 to increase or decrease  case number
 function updateCaseNumber(isIncrease){
     const caseNumberField  = document.getElementById('case-number-field');
    const caseNumberString = caseNumberField.value ;
@@ -23,6 +23,8 @@ function updateCasePrice(newCaseNumber){
 document.getElementById('case-btn-plus').addEventListener('click',function(){
   const newCaseNumber = updateCaseNumber( true);
   updateCasePrice(newCaseNumber);
+   
+  calculateSubTotal();
 
  
   
@@ -31,4 +33,7 @@ document.getElementById('case-btn-plus').addEventListener('click',function(){
 document.getElementById('case-btn-minus').addEventListener('click',function(){
  const newCaseNumber = updateCaseNumber(false);
  updateCasePrice(newCaseNumber);
+
+ calculateSubTotal();
+ 
 })
